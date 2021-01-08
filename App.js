@@ -6,7 +6,6 @@ import WriteScreen from './WriteScreen';
 import ReadScreen from './ReadScreen';
 
 
-
 export default class App extends React.Component{
 render(){
 return(

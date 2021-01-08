@@ -3,6 +3,7 @@ import {Text, View, StyleSheet, TextInput} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Header from './Header'
 
+
 export default class WriteScreen extends React.Component{
 
 constructor(props){
@@ -13,7 +14,6 @@ this.state={
   writeText: '',
 }
 }
-
 
     
 render(){
@@ -26,7 +26,7 @@ return(
 <TextInput style={styles.inputBox2} placeholder="Author" onChangeText= {(text)=>{ this.setState({author: text})}} value={this.state.author}/>
 <TextInput style={styles.inputBox3}  placeholder="Write Your Story" onChangeText= {(text)=>{ this.setState({writeText: text})}} value={this.state.writeText} multiline={true}/>
 
-<TouchableOpacity>
+<TouchableOpacity onPress = {this.submitStory}>
 <Text style = {styles.subMit}>Submit!</Text>
 </TouchableOpacity>
 </View>
